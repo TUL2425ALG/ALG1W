@@ -2,6 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+.idea/**/
 
 ### Eclipse ###
 .apt_generated
@@ -17,10 +18,29 @@ bin/
 
 ### NetBeans ###
 /nbproject/private/
+**/nbproject/
+manifest.mf
 /nbbuild/
 /dist/
+build/
+build.xml
 /nbdist/
-/.nb-gradle/
+.nb-gradle/
+
+### Java ###
+# Compiled class file
+*.class
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Package Files #
+*.jar
+
+### Maven ###
+# Maven-specific files (if applicable)
+target/
 
 ### VS Code ###
 .vscode/
