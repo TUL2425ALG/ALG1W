@@ -16,7 +16,7 @@ int finalSecondsA = hoursA * secondsInHour + minutesA * secondsInMinute + second
 
 //output
 System.out.println(finalSecondsA);
-      
+        System.out.println("ahoj");
         
 
     }
