@@ -37,6 +37,7 @@ System.out.println(finalSecondsB);
 //C)
 //input
 Scanner scanner = new Scanner(System.in);
+System.out.println("Zadej pocet hodin, minut a sekund: ");
 int hoursC = scanner.nextInt();
 int minutesC = scanner.nextInt();
 int secondsC = scanner.nextInt();
