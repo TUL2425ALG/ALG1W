@@ -17,7 +17,7 @@ public class U14PrestupnyRok {
 //        boolean isLeap = ((rok % 4) == 0 && !((rok % 100) == 0)) || (rok % 400) == 0;
 //        int nDays = isLeap? 366 : 365;
         
-//        int nDays = isLeap(rok)?366 : 365;
+//        int nDays = isLeap(rok)? 366 : 365;
            int nDays = getNumberDays(rok); 
         
         System.out.println(nDays);

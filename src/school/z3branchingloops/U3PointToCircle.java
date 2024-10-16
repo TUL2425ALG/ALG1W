@@ -26,7 +26,7 @@ public class U3PointToCircle {
 //        double distx = ax - sx;
 //        double disty = ay - sy;
 //        double distanc = Math.sqrt(Math.pow(distx, 2) + Math.pow(disty, 2));
-        double distanc = VectorTools.calcDistance(ax, sx, ay, sy); //volani metody
+        double distanc = Tools.calcDistance(ax, sx, ay, sy); //volani metody
         int result;
         //if (distanc == r) {
         if(Math.abs(distanc - r) < EPS){
