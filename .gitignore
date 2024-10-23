@@ -1,3 +1,32 @@
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+.idea/**/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+**/nbproject/
+manifest.mf
+/nbbuild/
+/dist/
+build/
+build.xml
+/nbdist/
+.nb-gradle/
+
 ### Java ###
 # Compiled class file
 *.class
@@ -9,34 +38,12 @@
 # Package Files #
 *.jar
 
-### NetBeans ###
-# IDE-specific directories NetBeans
-**/nbproject/
-manifest.mf
-
-# Compiled Ant build artifacts
-build/
-
-# Generated files and directories
-dist/
-build.xml
-
-### Intellij ###
-# IDE-specific directories IntelliJ IDEA
-.idea/**/
-out/
+### Maven ###
+# Maven-specific files (if applicable)
+target/
 
 ### VS Code ###
 .vscode/
 
-#OS
+### Mac OS ###
 .DS_Store
-
-# Maven-specific files (if applicable)
-target/
-
-
-
-
-
-
