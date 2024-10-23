@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class U28PerfectNumbers {
     public static boolean isPerfect(long number) {
-        int sum = 0;
+        int sum = 1;
         
-        for (int i = 1; i <= Math.sqrt(number); i++) {
+        for (int i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) { 
                 sum += i; //adds divisor
-                if((i*i != number )&&(i != 1)){ //check so there is no divisor used twice and number is not used as divisor
+                if(i*i != number ){ //check so there is no divisor used twice and number is not used as divisor
                 sum += number/i; //adds second divisor
                 }
             }
