@@ -1,4 +1,4 @@
-package CV4;
+package school.z3branchingloops;
 
 import java.util.Scanner;
 // Jan František Šůla :3
