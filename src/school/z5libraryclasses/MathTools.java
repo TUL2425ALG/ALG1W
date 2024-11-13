@@ -1,25 +1,25 @@
 package school.z5libraryclasses;
 
 public class MathTools {
-    public static double cos(float x, float eps){
+        public static double cos(double x, double eps) {
         double cos = 1;
-        double last; 
-        int i = 2;
-        int k = 1;
-        
-        while (true){
-            last = (Math.pow(x, i))/fact(i);
-            if (last < eps){
+        double k = 2;
+        double l = 3;
+        double m = 4;
+
+        double last = (Math.pow(x, 2)) / 2;
+        cos = cos + last * (-1);
+        while (true) {
+            last = last * ((Math.pow(x, 2)) / (l * m));
+            if (last < eps) {
                 break;
             }
             cos = cos + last * (Math.pow(-1, k));
-            i = i + 2;
-            k++;
+            k = k + 1;
+            l = l + 2;
+            m = m + 2;
         }
         return cos;
     }
-
-    private static double fact(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        
 }
