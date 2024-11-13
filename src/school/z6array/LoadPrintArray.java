@@ -55,7 +55,7 @@ public class LoadPrintArray {
         }
         return numbers;
     }
-
+    //overloaded method, pretizene metody - stejny nazev, jiny pocet nebo typ vstupnich parametru
     public static void loadArray(float[] numbers) {
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = sc.nextFloat();
