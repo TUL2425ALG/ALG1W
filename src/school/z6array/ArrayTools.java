@@ -80,5 +80,22 @@ public class ArrayTools {
         }
         return minCount;
     }
+    
+     /**
+     * testuje vzestupnost ciselne posloupnosti
+     * @param a je zadana posloupnost
+     * @return true: pole setridene vzestupne (kazdy prvek vetsi nez predchozi) false: jinak
+     */
+    public static boolean jeVzestupny(int[] a) {
+        //boolean vzestupnost = true;
+        for (int i = 0; i < a.length-1; i++){
+            if (a[i] >= a[i+1])
+               // vzestupnost = false;
+           // break;
+                return false;
+        }
+        //return vzestupnost;
+        return true;
+    }
 
 }
