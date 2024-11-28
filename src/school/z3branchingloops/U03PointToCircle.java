@@ -8,7 +8,7 @@ package school.z3branchingloops;
  * Test4 in: Bod A =[1.00001,6] na
  * Test5 in: Bod A =[1.1,6] mimo
  */
-public class U3PointToCircle {
+public class U03PointToCircle {
 
     public static void main(String[] args) {
         //in
