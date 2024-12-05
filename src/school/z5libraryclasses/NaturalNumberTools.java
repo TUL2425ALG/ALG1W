@@ -35,10 +35,8 @@ public class NaturalNumberTools {
 //        else{
 //            min = a;
 //        }
-        for(int i=min; i>=2; i--)
-        {
-            if(a % i == 0 && b % i == 0)
-            {
+        for(int i=min; i>=2; i--){
+            if(a % i == 0 && b % i == 0){
                 divisor = i;
                 return divisor;
             }             

@@ -52,7 +52,7 @@ public class U22Prvocislo {
     public static boolean isPrime(int a) {
         int n = 2;
         boolean jePrvocislo = true;
-        if (a <= 1) {
+        if (a <= 1) { //limitní stav
             jePrvocislo = false;
         }
         while (n <= Math.sqrt(a) && jePrvocislo) {

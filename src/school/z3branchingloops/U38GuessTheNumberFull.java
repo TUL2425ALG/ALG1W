@@ -10,6 +10,7 @@ public class U38GuessTheNumberFull {
     public static int max = 100;
     public static int randomNumber = 0;
     public static int pokusy = 0;
+    
     public static void main(String[] args) {
         boolean end = false;
         int choice_main;
@@ -41,8 +42,9 @@ public class U38GuessTheNumberFull {
         // Rozsah
         System.out.println("Myslím si číslo od " + min + " do " + max);
         // Random number
-        randomNumber = generateRandomNumber(min, max);
-        pokusy++;
+        randomNumber = generateRandomNumber(min, max); //JV neni duvod delat randomNumber globalni promennou
+        pokusy++; //JV neni duvod delat pokusy globalni promennou, potrebuju je jen v teto metode, pokud pustite metodu 2x za sebou, zustane Vám v pokusy pocet z prvni metody
+        //JV nikde neni pak vypis poctu pokusu
         // Generování
         boolean uhodl = false;
         do {

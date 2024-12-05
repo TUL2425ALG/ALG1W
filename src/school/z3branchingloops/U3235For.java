@@ -18,10 +18,10 @@ public class U3235For {
             System.out.println("");
         }
         System.out.println(""); //cisty novy radek
-        System.out.println("Vypis rectangle");
+        System.out.println("Vypis triangle");
         //trojuhelnik
-        for(int j = 1; j <= m; j++){ //po radcich //j cislo radku a zaroven pocet hvezdicek na tom radku
-            for(int i = 1; i <= j; i++){
+        for(int j = 1; j <= m; j++){ //po radcich //j cislo radku 
+            for(int i = 1; i <= j; i++){ //a zaroven j je pocet hvezdicek na tom radku
                 System.out.print("* ");
             }
             System.out.println("");

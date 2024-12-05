@@ -8,7 +8,7 @@ public class U9Platidla {
         //vstup
         System.out.println("Kdyz chces skoncit zadej zapornou castku ");
         boolean opakuj = true;
-        while (opakuj) {
+        while (opakuj) { //je to vlastne while (true)
             Scanner sc = new Scanner(System.in);
             System.out.println("Zadej částku: ");
             int penize = sc.nextInt();

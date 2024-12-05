@@ -26,12 +26,12 @@ public class U03PointToCircle {
 //        double distx = ax - sx;
 //        double disty = ay - sy;
 //        double distanc = Math.sqrt(Math.pow(distx, 2) + Math.pow(disty, 2));
-        double distanc = Tools.calcDistance(ax, sx, ay, sy); //volani metody
+        double distance = Tools.calcDistance(ax, sx, ay, sy); //volani metody
         int result;
         //if (distanc == r) {
-        if(Math.abs(distanc - r) < EPS){
+        if(Math.abs(distance - r) < EPS){
             result = ON;
-        } else if (distanc < r) {
+        } else if (distance < r) {
             result = IN;
         } else {
             result = OUT;

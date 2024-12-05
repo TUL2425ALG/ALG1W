@@ -8,7 +8,7 @@ public class MathTools {
         double m = 4;
 
         double last = (Math.pow(x, 2)) / 2;
-        cos = cos + last * (-1);
+        cos = cos - last;
         while (true) {
             last = last * ((Math.pow(x, 2)) / (l * m));
             if (last < eps) {

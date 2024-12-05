@@ -1,15 +1,15 @@
 package school.z7array2d;
 
-import java.util.Scanner;
-
 public class MatrixTools {
 
-    public static void NormovanyTvar(int[][] a) {
+    public static void normovanyTvar(int[][] a) {
         int maxAbs = 0;
+        int abs;
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
-                if (Math.abs(a[i][j]) > maxAbs) {
-                    maxAbs = Math.abs(a[i][j]);
+                abs = Math.abs(a[i][j]);
+                if (abs > maxAbs) {
+                    maxAbs = abs;
                 }
             }
         }
@@ -37,7 +37,7 @@ public class MatrixTools {
 //            }
 //        }
 //
-//        NormovanyTvar(a);
+//        normovanyTvar(a);
 ////        int[][] norm = NormovanyTvar2(a);
 //        for (int i = 0; i < a.length; i++) {
 //            for (int j = 0; j < a[i].length; j++) {
@@ -59,14 +59,16 @@ public class MatrixTools {
         System.out.println(MatrixTools.isSymetricByHorizontalAxe(matrix));
     }
 
-    public static int[][] NormovanyTvar2(int[][] a) {
+    public static int[][] normovanyTvar2(int[][] a) {
         int[][] b = new int[a.length][a[0].length];
 
         int maxAbs = 0;
+        int abs;
         for (int i = 0; i < b.length; i++) {
             for (int j = 0; j < b[i].length; j++) {
-                if (Math.abs(a[i][j]) > maxAbs) {
-                    maxAbs = Math.abs(a[i][j]);
+                abs = Math.abs(a[i][j]);
+                if (abs > maxAbs) {
+                    maxAbs = abs;
                 }
             }
         }
@@ -117,8 +119,5 @@ public class MatrixTools {
             }
         }
         return true;
-    }
-    
-    
-    
+    } 
 }

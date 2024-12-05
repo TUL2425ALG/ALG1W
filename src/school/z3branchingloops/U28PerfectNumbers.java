@@ -19,10 +19,13 @@ public class U28PerfectNumbers {
     }
     
     public static void main(String[] args){
+        //testing numbers
         long[] nums = {6,28,496, 8128, 33550336, 5};
         for(int i = 0; i < nums.length; i++){
             System.out.println(nums[i]+": "+isPerfect(nums[i]));
         }
+        
+        //from user input
         Scanner sc = new Scanner(System.in);
         System.out.print("Number to check: ");
         try {

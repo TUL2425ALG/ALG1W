@@ -1,7 +1,5 @@
 package school.z6array;
 
-import static school.z6array.LoadPrintArray.loadArray;
-
 public class ArrayTools {
 
     public static void main(String[] args) {
@@ -84,15 +82,13 @@ public class ArrayTools {
      * @param pole
      * @return upravene puvodni pole s obracenym poradim prvku
      */
-    public static int[] reverseArray(int[] pole) 
-    {
-        for (int i = 0; i < pole.length/2; i++) 
-        {
-            int temp = pole[i];
+    public static void reverseArray(int[] pole) {
+        int temp;
+        for (int i = 0; i < pole.length/2; i++) {
+            temp = pole[i];
             pole[i] = pole[pole.length - i - 1];
             pole[pole.length - i - 1] = temp;
         }
-        return pole;
     }
 
     /**
@@ -100,11 +96,9 @@ public class ArrayTools {
      * @return nove pole s obracenym poradim prvku
      */
 
-    public static int[] reverseArray2(int[] pole) 
-    {
+    public static int[] reverseArray2(int[] pole) {
         int[] pole2 = new int[pole.length];
-        for (int i = 0; i < pole.length; i++) 
-        {
+        for (int i = 0; i < pole.length; i++) {
             pole2[i] = pole[pole.length - i - 1];
         }
         return pole2;
