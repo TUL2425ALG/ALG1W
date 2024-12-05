@@ -1,5 +1,5 @@
 
-package school.z8.DataStructure;
+package school.z8.structure;
 
 
 public class U10Students {
@@ -18,11 +18,10 @@ public class U10Students {
     }
     public static void main(String[] args) {
         // nacteme studenty
-        int[][] students = new int[][];  
+        //int[][] students = new int[][];  
         
         //vystup
         int[] averages ;
-        averages = average(students);
-        System.out.print();
+        //averages = average(students);
      }
 }
