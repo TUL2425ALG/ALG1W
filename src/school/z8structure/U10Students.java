@@ -1,5 +1,5 @@
 
-package school.z8.structure;
+package school.z8structure;
 
 
 public class U10Students {
