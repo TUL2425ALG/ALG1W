@@ -1,5 +1,5 @@
 
-package z8structure;
+package school.z8structure;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ import java.util.Scanner;
  *
  * @author Jan Soupal
  */
-public class ObvodObsahNUhelniku {
+public class U1a2ObvodObsahNUhelniku {
 
     
     public static void main(String[] args) {

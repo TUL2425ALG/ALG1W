@@ -1,6 +1,6 @@
-package z3branchingloops;
+package school.z3branchingloops;
 
-public class birthNumber {
+public class U15BirthNumber {
 
     public static void main(String[] args) {
         String firstPart = "780123";

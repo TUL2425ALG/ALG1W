@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package school.z7array2d;
 
 /**
@@ -9,7 +5,8 @@ package school.z7array2d;
  * @author rehak
  */
 import java.util.Scanner;
-public class MatrixValuesChecker {
+
+public class U5MatrixValuesChecker {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -17,13 +14,13 @@ public class MatrixValuesChecker {
         int n = scanner.nextInt();
         int[][] matrix = new int[n][n];
         System.out.println("Zadejte prvky matice:");
-        
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 matrix[i][j] = scanner.nextInt();
             }
         }
-        
+
         boolean isValid = true;
         for (int number = 1; number <= n * n; number++) {
             boolean found = false;
@@ -44,14 +41,12 @@ public class MatrixValuesChecker {
                 break;
             }
         }
-        
-            if (isValid) {
-                System.out.println("Matice obsahuje všechny hodnoty od 1 do " + (n * n) + ".");
-            }
-            else{
-                System.out.println("Matice neobsahuje všechny hodnoty od 1 do " + (n * n) + ".");
-            }
 
-        
+        if (isValid) {
+            System.out.println("Matice obsahuje všechny hodnoty od 1 do " + (n * n) + ".");
+        } else {
+            System.out.println("Matice neobsahuje všechny hodnoty od 1 do " + (n * n) + ".");
+        }
+
     }
 }

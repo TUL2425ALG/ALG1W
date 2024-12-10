@@ -20,21 +20,21 @@ public class MatrixTools {
         }
 
     }
-        public static int[][] MatrixMultiply(int[][] Matrix1, int[][] Matrix2){
-        int[][]MatrixProduct = new int[Matrix1.length][Matrix2[0].length];
-        if(Matrix1[0].length != Matrix2.length){
-            System.out.println("Neplatna matice");
-        }
-        else
-            for (int i = 0; i < (MatrixProduct.length); i++) {
-                for (int j = 0; j < MatrixProduct[0].length; j++) {
-                    for (int k = 0; k < Matrix2.length; k++) {
-                        MatrixProduct[i][j] += Matrix1[i][k] * Matrix2[k][j];
+
+    public static int[][] matrixMultiply(int[][] matrix1, int[][] matrix2) {
+        int[][] matrixProduct = new int[matrix1.length][matrix2[0].length];
+        if (matrix1[0].length != matrix2.length) {
+            System.out.println("Neplatna matice"); //nepouzivat v metodach sout, vratit treba prazdne pole, nebo vyjimku
+        } else {
+            for (int i = 0; i < (matrixProduct.length); i++) {
+                for (int j = 0; j < matrixProduct[0].length; j++) {
+                    for (int k = 0; k < matrix2.length; k++) {
+                        matrixProduct[i][j] += matrix1[i][k] * matrix2[k][j];
                     }
                 }
             }
-        
-        return MatrixProduct;
+        }
+        return matrixProduct;
     }
 
     public static void main(String[] args) {
@@ -62,13 +62,12 @@ public class MatrixTools {
 //            }
 //            System.out.println("");
 //        }
-        
+
         int[][] matrix = {{2, 6, 6, 2},
-                          {6, 3, 3, 6},
-                          {7, 1, 1, 7},
-                          {2, 7, 7, 2}};
-        
-        
+        {6, 3, 3, 6},
+        {7, 1, 1, 7},
+        {2, 7, 7, 2}};
+
         System.out.println(MatrixTools.isSymetricByDiagonal(matrix));
         System.out.println(MatrixTools.isSymetricBySideDiagonal(matrix));
         System.out.println(MatrixTools.isSymetricByVerticalAxe(matrix));
@@ -96,44 +95,48 @@ public class MatrixTools {
         return b;
 
     }
-    public static boolean isSymetricByDiagonal(int[][] a){
+
+    public static boolean isSymetricByDiagonal(int[][] a) {
         for (int i = 1; i < a.length; i++) {
-            for (int j = 0; j < i; j++){
-                if (a[i][j] != a[j][i]){
-                    return false;
-                }
-            }
-    }
-        return true;
-}
-    public static boolean isSymetricBySideDiagonal(int[][] a){
-        for (int i = 0; i < a.length-1; i++) {
-            for (int j = 0; j < a.length-1-i; j++){
-                if (a[i][j] != a[a.length-1-j][a.length-1-i]){
+            for (int j = 0; j < i; j++) {
+                if (a[i][j] != a[j][i]) {
                     return false;
                 }
             }
         }
         return true;
     }
-    public static boolean isSymetricByVerticalAxe(int[][] a){
+
+    public static boolean isSymetricBySideDiagonal(int[][] a) {
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = 0; j < a.length - 1 - i; j++) {
+                if (a[i][j] != a[a.length - 1 - j][a.length - 1 - i]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static boolean isSymetricByVerticalAxe(int[][] a) {
         for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a.length / 2; j++){
-                if (a[i][j] != a[i][a[i].length-1-j]){
+            for (int j = 0; j < a.length / 2; j++) {
+                if (a[i][j] != a[i][a[i].length - 1 - j]) {
                     return false;
                 }
             }
         }
         return true;
     }
-    public static boolean isSymetricByHorizontalAxe(int[][] a){
+
+    public static boolean isSymetricByHorizontalAxe(int[][] a) {
         for (int i = 0; i < a.length / 2; i++) {
-            for (int j = 0; j < a.length; j++){
-                if (a[i][j] != a[a.length-1-i][j]){
+            for (int j = 0; j < a.length; j++) {
+                if (a[i][j] != a[a.length - 1 - i][j]) {
                     return false;
                 }
             }
         }
         return true;
-    } 
+    }
 }
