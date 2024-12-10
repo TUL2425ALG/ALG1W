@@ -20,6 +20,22 @@ public class MatrixTools {
         }
 
     }
+        public static int[][] MatrixMultiply(int[][] Matrix1, int[][] Matrix2){
+        int[][]MatrixProduct = new int[Matrix1.length][Matrix2[0].length];
+        if(Matrix1[0].length != Matrix2.length){
+            System.out.println("Neplatna matice");
+        }
+        else
+            for (int i = 0; i < (MatrixProduct.length); i++) {
+                for (int j = 0; j < MatrixProduct[0].length; j++) {
+                    for (int k = 0; k < Matrix2.length; k++) {
+                        MatrixProduct[i][j] += Matrix1[i][k] * Matrix2[k][j];
+                    }
+                }
+            }
+        
+        return MatrixProduct;
+    }
 
     public static void main(String[] args) {
         //int[][] a = {{2, 9},
