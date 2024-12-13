@@ -8,38 +8,16 @@ public class DayInWeek {
 
     public static void main(String[] args) {
         // https://cs.wikipedia.org/wiki/Algoritmus_pro_v%C3%BDpo%C4%8Det_dne_v_t%C3%BDdnu
-        denTydne(28, 5, 2023);
+        denTydne(1, 1, 2024);
     }
-    //JV oddelit pocitani od vypisovani
-    //JV vytvorit samostatnou metodu, ktera bude mit na vstupu int den, int mesic, int rok a bude vracet int - cislo dne v tydnu, pokud dany datum neexistuje vráti -1
-    //JV pak další metodu, ktera pripadne vypise cesky nazev dne
-    public static void denTydne(int den, int mesic, int rok) {
-        int denvypis = den;
-        int rokvypis = rok;
-        int[] dnyvmesici = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        String[] dnyvtydnu = new String[]{"Sobota", "Neděle", "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek"};
-        if (LeapYear(rok)) {
-            dnyvmesici[3] = 29;
-        }
-        if (den > dnyvmesici[mesic - 1] || den < 1 || mesic < 1 || mesic > 12) {
-            System.out.println(denvypis + ". " + mesic + ". " + rokvypis + " je nesprávný DATUM.");
-        } else {
-            if (mesic < 3) {
-                mesic = mesic + 12;
-                rok--;
-            }
-            /*
-                System.out.println(den);
-                System.out.println(mesic);
-                System.out.println(rok);
-             */
-            int vypocet = den + 13 * (mesic + 1) / 5 + (rok % 100) + (rok % 100) / 4 + (rok / 100) / 4 + 5 * (rok / 100);
-            vypocet = vypocet % 7;
-            System.out.println(denvypis + ". " + mesic + ". " + rokvypis + " - " + dnyvtydnu[vypocet]);
-        }
+    public static void denTydne(int den, int mesic, int rok)
+    {
+        System.out.print(den + ". " + mesic + ". " + rok + " - ");
+        OutputDayInWeek(DayFromDate(den, mesic, rok));
     }
 
-    public static boolean LeapYear(int year) {
+    public static boolean LeapYear(int year)
+    {
         boolean leap = false;
         if (year % 4 == 0) {
             if (year % 100 == 0) {
@@ -51,5 +29,35 @@ public class DayInWeek {
             }
         }
         return leap;
+    }
+    public static int DayFromDate(int day, int month, int year)
+    {
+        int[] dnyvmesici = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        if (LeapYear(year)) {
+            dnyvmesici[3] = 29;
+        }
+        if (day > dnyvmesici[month - 1] || day < 1 || month < 1 || month > 12) {
+            return (-1);
+        } else {
+            if (month < 3) {
+                month = month + 12;
+                year--;
+            }
+            int vypocet = day + 13 * (month + 1) / 5 + (year % 100) + (year % 100) / 4 + (year / 100) / 4 + 5 * (year / 100);
+            return (vypocet % 7);
+        }
+    }
+    public static void OutputDayInWeek(int day)
+    {
+        if (day < 0)
+        {
+            System.out.print("Datum je NEPLATNÝ.");
+        }
+        else
+        {
+            String[] dnyvtydnu = new String[]{"Sobota", "Neděle", "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek"};
+            System.out.print(dnyvtydnu[day]);
+        }
+        System.out.println("");
     }
 }
